@@ -120,29 +120,189 @@ print("hello world")
 
 本章详细介绍了 Python 的基本类型，包括整形、浮点型；10、8、2、16 进制数的意义和转换关系；布尔类型；字符串与字符串常见运算操作
 
-### 3-1 什么是代码，什么是写代码 试看
+3-1 什么是代码，什么是写代码 试看
 
-### 3-2 数字：整形与浮点型 试看
+### 3-2 数字：整形与浮点型
 
-### 3-3 10、2、8、16 进制
+```
+print(type(1))
+print(type(-1))
+print(type(1.1))
+print(type(1.1111111111111111111111111111))
+print(type(1 + 0.1))
+print(type(1.0 + 1))
+print(type(1.0 * 1))
+print(type(1 / 1))  # <class 'float'>
+print(type(1 // 1))  # <class 'int'>
+print(1 // 2)  # 0
+print(1 / 2)  # 0.5
+```
+
+
+
+3-3 10、2、8、16 进制
 
 ### 3-4 各进制的表示与转换
 
+```
+# 二进制
+print(0b11)  # 3
+# 八进制
+print(0o11)  # 9
+# 十六进制
+print(0x1f)  # 31
+
+# 进制转换
+# 转换为二进制
+print(bin(0x1f))  # 0b11111
+# 转换为八进制
+print(oct(0x1f))  # 0o37
+# 转换为十进制
+print(int(0x1f))  # 31
+# 转换为十六进制
+print(hex(0b11111))  # 0x1f
+```
+
+
+
 ### 3-5 数字：布尔类型与复数
 
-### 3-6 字符串：单引号与双引号
+```
+# boolean
+print(type(True))
+print(type(False))
+print(int(True))  # 1
+print(int(False))  # 0
+print(bool(1))  # True
+print(bool(0))  # False
+print(bool(1.1))  # True
+print(bool(-1.1))  # True
+print(bool(0b01))  # True
+print(bool(0b00))  # False
+print(bool(''))  # False
+print(bool('a'))  # True
+print(bool([1, 2]))  # True
+print(bool([]))  # False
+print(bool({1, 2, 3}))  # True
+print(bool({}))  # False
+print(bool(None))  # False
+# 复数
+print(360432j)  # False
+```
 
-### 3-7 多行字符串
+
+
+### 3-6 字符串：单引号、双引号、三引号
+
+如何表示字符串？
+单引号，双引号，三引号
+
+```
+print("1")
+print('1')
+print(1)
+
+print(type("1"))  # <class 'str'>
+print(type('1'))  # <class 'str'>
+print(type(1))  # <class 'int'>
+
+print('let\'s go')
+print("let's go")
+
+print('''let's go 1, 
+1, 
+1''')
+
+print("""let's go 2, 
+2, 
+2""")
+
+# 使用反斜杠n换行
+print("""let's go 3, \n3, \n3""")
+
+print("let's go 4, \n4, \n4")
+
+# 使用三引号换行，多两个回车
+print("""
+let's go 5, 
+5, 
+5
+""")
+
+# 使用反斜杠换行输入，实际并没有换行
+# let's go 6, 6, 6
+print("\
+let's go 6, \
+6, \
+6\
+")
+
+```
+
+
+
+3-7 多行字符串
 
 ### 3-8 转义字符
 
+特殊的字符，无法“看见”的字符，与语言本身语法有冲突的字符
+
+```
+\n 换行
+\` 单引号
+\t 横向制表符
+\r 回车
+```
+
+```
+# 转义字符
+print('1\n1')
+print('2\`2')
+print('3\t3')
+print('4\r4')
+print('hello \n world')
+print('hello \\n world')  # hello \n world
+```
+
+
+
 ### 3-9 原始字符串
 
-### 3-10 字符串运算 一
+```
+# 示例字符串
+print('c:\north\north')
+print('c:\\north\\north')
+# 打印原始字符串
+print(r'c:\north\north')
 
-### 3-11 字符串运算 二
+```
 
-### 3-12 字符串运算 三
+
+
+### 3-10 字符串运算
+
+```
+print('hello'+"world")
+print('hello'*2)
+print('hello'[4])
+print('hello'[0])
+print("hello world"[6])
+print("hello world"[-5])
+
+# 截取字符串 多数一位
+print("hello world"[0:5])  # hello
+print("hello world"[0:-1])  # hello worl
+
+# 截取world 冒号前面默认0，后面默认最后一位位置
+print("hello world"[6:11])  # world
+print("hello world"[6:])  # world
+print("hello world"[-5:])  # world
+
+```
+
+3-11 字符串运算 二
+
+3-12 字符串运算 三
 
 ## 第 4 章 Python 中表示“组”的概念与定义
 
