@@ -1,7 +1,7 @@
 a = 1
 print(type(a) == int)
 
-b = 'hi'
+b = "hi"
 print(type(b) == str)
 
 test1 = isinstance(a, str)
