@@ -26,8 +26,6 @@
 5. 机器学习：Tensor Flow
 6. 胶水语言：混合其他如 C++、Java 等来编程。能够把用其他语言制作的各种模块（尤其是 C/C++）很轻松地联结在一起
 
-
-
 1-7 课程内容与特点
 
 1-8 Python 的前景
@@ -54,19 +52,17 @@
 
 ### 2-7 安装 Python
 
-#### [python虚拟环境管理工具venv教程](https://vra.github.io/2021/01/03/venv-intro/)
+#### [python 虚拟环境管理工具 venv 教程](https://vra.github.io/2021/01/03/venv-intro/)
 
 > ##### 0. 概述
 >
-> Python有各种各样的系统包和第三方开发的包，让我们的开发变得异常容易。不过也引入了一个问题，不同代码需要的包版本可能是不一样的，所以常常回出现这种情况，为了代码B修改了依赖包的版本，代码B能work了，之前使用的代码A就没法正常工作了。因此常常需要对不同的代码设置不同的Python虚拟环境。[venv](https://docs.python.org/zh-cn/3/tutorial/venv.html)是Python自带的虚拟环境管理工具，使用很方便，这里简单记录一下使用方法。
+> Python 有各种各样的系统包和第三方开发的包，让我们的开发变得异常容易。不过也引入了一个问题，不同代码需要的包版本可能是不一样的，所以常常回出现这种情况，为了代码 B 修改了依赖包的版本，代码 B 能 work 了，之前使用的代码 A 就没法正常工作了。因此常常需要对不同的代码设置不同的 Python 虚拟环境。[venv](https://docs.python.org/zh-cn/3/tutorial/venv.html)是 Python 自带的虚拟环境管理工具，使用很方便，这里简单记录一下使用方法。
 >
-> 
->
-> 需要注意的是，venv 工具没法创建不同版本的python环境，也就是如果你用python3.5没法创建python3.6的虚拟环境。如果想要使用不同python版本的虚拟环境，请安装 virtual env包。
+> 需要注意的是，venv 工具没法创建不同版本的 python 环境，也就是如果你用 python3.5 没法创建 python3.6 的虚拟环境。如果想要使用不同 python 版本的虚拟环境，请安装 virtual env 包。
 >
 > ##### 1. 安装
 >
-> python3.6及以上已经默认安装，python3.5需要通过系统的包管理工具安装：
+> python3.6 及以上已经默认安装，python3.5 需要通过系统的包管理工具安装：
 >
 > ```
 > sudo apt install python3-venv
@@ -94,27 +90,23 @@
 > pip install tensorflow
 > ```
 >
-> 注意这里不需要root权限，因此无需添加`sudo`。
+> 注意这里不需要 root 权限，因此无需添加`sudo`。
 >
 > 安装的包会放在`~/test_env/lib/pythonx.x/site-packages` 目录下。
 >
 > ##### 4. 退出虚拟环境
 >
-> 退出虚拟的python环境，在命令行执行下面的命令即可：
+> 退出虚拟的 python 环境，在命令行执行下面的命令即可：
 >
 > ```
 > deactivate
 > ```
-
-
 
 ### 2-8 IDLE 与第一段 Python 代码
 
 ```python
 print("hello world")
 ```
-
-
 
 ## 第 3 章 理解什么是写代码与 Python 的基本类型
 
@@ -138,8 +130,6 @@ print(1 // 2)  # 0
 print(1 / 2)  # 0.5
 ```
 
-
-
 3-3 10、2、8、16 进制
 
 ### 3-4 各进制的表示与转换
@@ -162,8 +152,6 @@ print(int(0x1f))  # 31
 # 转换为十六进制
 print(hex(0b11111))  # 0x1f
 ```
-
-
 
 ### 3-5 数字：布尔类型与复数
 
@@ -190,8 +178,6 @@ print(bool(None))  # False
 print(360432j)  # False
 ```
 
-
-
 ### 3-6 字符串：单引号、双引号、三引号
 
 如何表示字符串？
@@ -209,12 +195,12 @@ print(type(1))  # <class 'int'>
 print('let\'s go')
 print("let's go")
 
-print('''let's go 1, 
-1, 
+print('''let's go 1,
+1,
 1''')
 
-print("""let's go 2, 
-2, 
+print("""let's go 2,
+2,
 2""")
 
 # 使用反斜杠n换行
@@ -224,8 +210,8 @@ print("let's go 4, \n4, \n4")
 
 # 使用三引号换行，多两个回车
 print("""
-let's go 5, 
-5, 
+let's go 5,
+5,
 5
 """)
 
@@ -238,8 +224,6 @@ let's go 6, \
 ")
 
 ```
-
-
 
 3-7 多行字符串
 
@@ -264,8 +248,6 @@ print('hello \n world')
 print('hello \\n world')  # hello \n world
 ```
 
-
-
 ### 3-9 原始字符串
 
 ```
@@ -276,8 +258,6 @@ print('c:\\north\\north')
 print(r'c:\north\north')
 
 ```
-
-
 
 ### 3-10 字符串运算
 
@@ -303,6 +283,8 @@ print("hello world"[-5:])  # world
 3-11 字符串运算 二
 
 3-12 字符串运算 三
+
+后面笔记在代码里面
 
 ## 第 4 章 Python 中表示“组”的概念与定义
 
@@ -675,6 +657,8 @@ print("hello world"[-5:])  # world
 ## 第 16 章 进阶教程《Python Flask 高级编程》多章节试看体验 2
 
 为让同学们选择更适合进阶提升的教程，特申请了《Python Flask 高级编程（下篇）》课程多篇章内容试看，让同学们充分了解新课程再购买。虽然是试看，但我也希望同学们能够从试看中学到知识。我尽可能保证试看章节的完整性，但很难保证绝对的完整，望大家理解。...
+
+试看，不完整
 
 ### 16-1 鱼豆
 
